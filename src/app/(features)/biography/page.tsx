@@ -477,13 +477,7 @@ export default function BiographyPage() {
                 type="submit"
                 variant="solid"
                 color="primary"
-                startDecorator={
-                  saveMutation.isPending ? (
-                    <CircularProgress size="sm" />
-                  ) : (
-                    <FloppyDisk size={16} />
-                  )
-                }
+                startDecorator={!saveMutation.isPending ? <FloppyDisk size={16} /> : undefined}
                 loading={saveMutation.isPending}
                 sx={{ borderRadius: '999px' }}
               >
