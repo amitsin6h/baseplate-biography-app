@@ -441,16 +441,24 @@ export default function BiographyPage() {
             ))}
           </Stack>
 
-          {/* Save / Cancel footer — only shown when form has unsaved changes */}
+          {/* Save / Cancel footer — sticky floating bar, only shown when form has unsaved changes */}
           {isDirty && (
             <Box
               sx={{
+                position:    'fixed',
+                bottom:      24,
+                left:        '50%',
+                transform:   'translateX(-50%)',
+                zIndex:      1200,
                 display:     'flex',
                 gap:         1.5,
-                justifyContent: 'flex-end',
-                mt:          4,
-                pt:          3,
-                borderTop:   '1px solid',
+                alignItems:  'center',
+                px:          3,
+                py:          1.5,
+                borderRadius: '999px',
+                bgcolor:     'background.surface',
+                boxShadow:   'lg',
+                border:      '1px solid',
                 borderColor: 'neutral.outlinedBorder',
               }}
             >
