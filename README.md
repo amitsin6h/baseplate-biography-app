@@ -21,6 +21,15 @@ To test URL mode, use a well-known public figure like `https://www.linkedin.com/
 
 ---
 
+## Screenshots
+
+![Empty state](01-empty-state.png)
+![Generate modal](02-generate-modal.png)
+![Generated profile](03-generated-profile.png)
+![Rewrite panel](04-rewrite-panel.png)
+
+---
+
 ## What I Built
 
 ### Backend
