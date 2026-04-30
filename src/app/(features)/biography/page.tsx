@@ -315,7 +315,7 @@ export default function BiographyPage() {
             disabled={isLoading || isGenerating}
             sx={{ gridColumn: '2 / 3', borderRadius: '999px' }}
           >
-            {profile ? 'Update' : 'Generate'}
+            {profile ? 'Re-generate' : 'Generate'}
           </Button>
         </Box>
       </Box>
