@@ -143,9 +143,9 @@ export default function GenerateBiographyModal({
       <ModalDialog
         layout="center"
         sx={{
-          width:    '60vw',
+          width:    { xs: '92vw', sm: '60vw' },
           maxWidth: 720,
-          minWidth: 320,
+          minWidth: 0,
           // Single scroll owner — ModalDialog itself does NOT scroll
           overflow: 'hidden',
           display:  'flex',
@@ -218,11 +218,10 @@ export default function GenerateBiographyModal({
 
               <Box
                 sx={{
-                  display:             'grid',
-                  gridTemplateColumns: 'repeat(2, 1fr)',
-                  gap:                 1.5,
-                  justifyContent:      'flex-end',
-                  marginLeft:          'auto',
+                  display:        'flex',
+                  gap:            1.5,
+                  justifyContent: 'flex-end',
+                  flexWrap:       'wrap',
                 }}
               >
                 <Button
@@ -230,7 +229,7 @@ export default function GenerateBiographyModal({
                   variant="outlined"
                   color="neutral"
                   onClick={onClose}
-                  sx={{ borderRadius: '999px' }}
+                  sx={{ borderRadius: '999px', flex: { xs: 1, sm: 'none' } }}
                 >
                   Cancel
                 </Button>
@@ -240,7 +239,7 @@ export default function GenerateBiographyModal({
                   color="primary"
                   loading={generateFromUrl.isPending}
                   startDecorator={generateFromUrl.isPending ? <CircularProgress size="sm" /> : undefined}
-                  sx={{ borderRadius: '999px' }}
+                  sx={{ borderRadius: '999px', flex: { xs: 1, sm: 'none' } }}
                 >
                   Generate
                 </Button>
@@ -299,10 +298,10 @@ export default function GenerateBiographyModal({
 
               <Box
                 sx={{
-                  display:             'grid',
-                  gridTemplateColumns: 'repeat(2, 1fr)',
-                  gap:                 1.5,
-                  marginLeft:          'auto',
+                  display: 'flex',
+                  gap:     1.5,
+                  justifyContent: 'flex-end',
+                  flexWrap: 'wrap',
                 }}
               >
                 <Button
@@ -310,7 +309,7 @@ export default function GenerateBiographyModal({
                   variant="outlined"
                   color="neutral"
                   onClick={onClose}
-                  sx={{ borderRadius: '999px' }}
+                  sx={{ borderRadius: '999px', flex: { xs: 1, sm: 'none' } }}
                 >
                   Cancel
                 </Button>
@@ -322,7 +321,7 @@ export default function GenerateBiographyModal({
                   startDecorator={
                     generateFromText.isPending ? <CircularProgress size="sm" /> : undefined
                   }
-                  sx={{ borderRadius: '999px' }}
+                  sx={{ borderRadius: '999px', flex: { xs: 1, sm: 'none' } }}
                 >
                   Generate
                 </Button>

@@ -276,12 +276,12 @@ export default function BiographyPage() {
           ---------------------------------------------------------------- */}
       <Box
         sx={{
-          display:        'flex',
-          flexDirection:  'row',
-          justifyContent: 'space-between',
-          alignItems:     'flex-start',
-          columnGap:      4,
-          mb:             3,
+          display:       'flex',
+          flexDirection: { xs: 'column', sm: 'row' },
+          alignItems:    { xs: 'flex-start', sm: 'flex-start' },
+          columnGap:     4,
+          rowGap:        2,
+          mb:            3,
         }}
       >
         {/* Left column */}
@@ -296,16 +296,11 @@ export default function BiographyPage() {
           </Typography>
         </Stack>
 
-        {/* Right column — action grid per ui.md */}
+        {/* Right column — action button */}
         <Box
           sx={{
-            display:         'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            gap:             1.5,
-            marginLeft:      'auto',
-            justifyContent:  'flex-end',
-            alignItems:      'flex-start',
-            flexShrink:      0,
+            flexShrink: 0,
+            alignSelf:  { xs: 'flex-start', sm: 'flex-start' },
           }}
         >
           <Button
@@ -313,7 +308,7 @@ export default function BiographyPage() {
             color="primary"
             onClick={() => setIsModalOpen(true)}
             disabled={isLoading || isGenerating}
-            sx={{ gridColumn: '2 / 3', borderRadius: '999px' }}
+            sx={{ borderRadius: '999px' }}
           >
             {profile ? 'Re-generate' : 'Generate'}
           </Button>
@@ -446,13 +441,15 @@ export default function BiographyPage() {
             <Box
               sx={{
                 position:    'fixed',
-                bottom:      24,
-                left:        '50%',
-                transform:   'translateX(-50%)',
+                bottom:      { xs: 16, sm: 24 },
+                left:        { xs: 16, sm: '50%' },
+                right:       { xs: 16, sm: 'auto' },
+                transform:   { xs: 'none', sm: 'translateX(-50%)' },
                 zIndex:      1200,
                 display:     'flex',
                 gap:         1.5,
                 alignItems:  'center',
+                justifyContent: 'center',
                 px:          3,
                 py:          1.5,
                 borderRadius: '999px',
