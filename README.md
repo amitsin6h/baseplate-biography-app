@@ -27,6 +27,7 @@ To test URL mode, use a well-known public figure like `https://www.linkedin.com/
 ![Generate modal](02-generate-modal.png)
 ![Generated profile](03-generated-profile.png)
 ![Rewrite panel](04-rewrite-panel.png)
+![Save Changes](05-save-changes.png)
 
 ---
 
